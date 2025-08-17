@@ -1,0 +1,19 @@
+public class EvenFibonacciSum {
+    public static void main(String[] args) {
+        int n = 100;   // limit
+        int sum = 0;
+        int first = 0;
+        int second = 1;
+
+        while (second <= n) {
+            if (second % 2 == 0) {
+                sum += second;
+            }
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+
+        System.out.println("Sum of even Fibonacci numbers up to " + n + " is: " + sum);
+    }
+}
